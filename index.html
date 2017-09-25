@@ -219,6 +219,37 @@
 </footer>
 
 </body>
+
+    <script type="text/ng-template" id="dialogRole.html">
+    <md-dialog aria-label="Mango (Fruit)">
+      <form>
+        <md-toolbar>
+          <div class="md-toolbar-tools">
+            <h2>Change your role</h2>
+          </div>
+        </md-toolbar>
+        <md-dialog-content style="max-width:800px;max-height:810px; ">
+          <div>
+            <md-radio-group ng-model="selected">
+              <md-radio-button ng-repeat="role in roles" value="{{role}}" class="md-primary">{{role}}</md-radio-button>
+            </md-radio-group>
+          </div>
+        </md-dialog-content>
+
+        <div class="md-actions" layout="row">
+          <md-button ng-click="cancel()" md-autofocus>
+            Cancel
+          </md-button>
+          <span flex></span>
+          <md-button ng-click="select(selected)" style="margin-right:20px;">
+            Select
+          </md-button>
+        </div>
+      </form>
+    </md-dialog>
+  </script>
+
+  
 	<!--   Core JS Files   -->
 	<script src="assets/js/jquery.min.js" type="text/javascript"></script>
 	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
